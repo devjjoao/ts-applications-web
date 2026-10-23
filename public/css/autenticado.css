@@ -1,0 +1,78 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: white;
+  overflow: hidden;
+}
+
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, #1a1033 0%, #050505 100%);
+}
+
+/* Card Glassmorphism */
+.glass-card {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Animação de Anel de Sucesso */
+.success-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring-bg {
+  position: absolute;
+  inset: 0;
+  border: 4px solid rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+}
+.ring-fill {
+  position: absolute;
+  inset: 0;
+  border: 4px solid #1d4ed8;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.check-icon {
+  font-size: 2.5rem;
+  color: #1d4ed8;
+  display: none; /* Aparece quando "valida" */
+}
+
+/* Barra de progresso secreta */
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+  width: 0%;
+}

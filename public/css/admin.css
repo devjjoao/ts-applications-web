@@ -1,0 +1,52 @@
+body {
+  background: #050505;
+  color: #f4f4f5;
+}
+.card {
+  background: #0a0a0c;
+  border: 1px solid #202024;
+  border-radius: 18px;
+}
+.tab.active {
+  background: #2563eb;
+  color: white;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  min-width: 760px;
+}
+th {
+  text-align: left;
+  color: #71717a;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+td,
+th {
+  padding: 14px;
+  border-bottom: 1px solid #18181b;
+}
+.pill {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #18181b;
+}
+.action {
+  padding: 7px 10px;
+  border: 1px solid #27272a;
+  border-radius: 9px;
+  font-size: 11px;
+}
+.action:hover:not(:disabled) {
+  border-color: #2563eb;
+  color: #60a5fa;
+}
+.action:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}

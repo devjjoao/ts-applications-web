@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administração — Ts Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/shared.css" />
+  </head>
+  <body class="min-h-screen">
+    <header
+      class="sticky top-0 z-40 border-b border-zinc-900 bg-black/90 backdrop-blur px-6 py-4"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 font-bold">
+          <img
+            src="/img/ts-logo-transparent.png"
+            class="w-9 h-9 rounded-full"
+            alt=""
+          />
+          <span>Ts Applications <b class="text-blue-500">Admin</b></span>
+        </a>
+        <div class="flex gap-3">
+          <a href="/status" class="text-sm text-zinc-400 hover:text-white"
+            >Status</a
+          >
+          <a href="/dashboard" class="text-sm text-zinc-400 hover:text-white"
+            >Dashboard</a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-10">
+      <div class="mb-8">
+        <p class="text-blue-500 text-xs font-black tracking-[.2em] uppercase">
+          Centro de operações
+        </p>
+        <h1 class="text-4xl font-black mt-2">Administração</h1>
+        <p class="text-zinc-500 mt-2">
+          Clientes, pedidos, aplicações, incidentes e auditoria.
+        </p>
+      </div>
+      <div
+        id="metrics"
+        class="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-8"
+      ></div>
+      <nav
+        class="flex gap-2 overflow-x-auto mb-5"
+        id="tabs"
+        aria-label="Áreas administrativas"
+      >
+        <button
+          class="tab active px-4 py-2 rounded-xl text-sm"
+          data-tab="customers"
+        >
+          Clientes
+        </button>
+        <button class="tab px-4 py-2 rounded-xl text-sm" data-tab="orders">
+          Pedidos
+        </button>
+        <button class="tab px-4 py-2 rounded-xl text-sm" data-tab="apps">
+          Aplicações
+        </button>
+        <button
+          class="tab px-4 py-2 rounded-xl text-sm"
+          data-tab="notifications"
+        >
+          Notificações
+        </button>
+        <button class="tab px-4 py-2 rounded-xl text-sm" data-tab="incidents">
+          Incidentes
+        </button>
+        <button class="tab px-4 py-2 rounded-xl text-sm" data-tab="audit">
+          Auditoria
+        </button>
+      </nav>
+      <section id="content" class="card min-h-80" aria-live="polite">
+        <div class="p-8 text-zinc-500">Carregando...</div>
+      </section>
+    </main>
+    <div
+      id="toast"
+      class="fixed left-1/2 -translate-x-1/2 bottom-6 hidden bg-zinc-900 border border-zinc-700 px-5 py-3 rounded-xl text-sm z-50"
+      role="status"
+    ></div>
+    <script src="/js/admin.js" defer></script>
+    <script src="/js/site-guard.js" defer></script>
+  </body>
+</html>

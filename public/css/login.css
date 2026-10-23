@@ -1,0 +1,73 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: white;
+  overflow: hidden;
+}
+
+/* Preloader */
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Background e Aura */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.aura {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Card de Login */
+.login-card {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.discord-btn {
+  background-color: #2563eb;
+  transition: all 0.3s ease;
+}
+.discord-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+}
+
+#snowCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}

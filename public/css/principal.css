@@ -1,0 +1,47 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: #e4e4e7;
+  scroll-behavior: smooth;
+}
+
+/* Fundo Grid */
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 30%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.text-discord {
+  color: #2563eb;
+}
+
+/* Efeitos dos Cards */
+.glass-card {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-featured {
+  border: 1px solid #2563eb;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+  position: relative;
+}

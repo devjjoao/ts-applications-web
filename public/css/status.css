@@ -1,0 +1,24 @@
+body {
+  background: #050505;
+  color: #fafafa;
+}
+.card {
+  background: #0a0a0c;
+  border: 1px solid #202024;
+  border-radius: 18px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 7px #10b98118;
+}
+.degraded .dot {
+  background: #f59e0b;
+  box-shadow: 0 0 0 7px #f59e0b18;
+}
+.major_outage .dot {
+  background: #ef4444;
+  box-shadow: 0 0 0 7px #ef444418;
+}

@@ -1,0 +1,55 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, #111 1px, transparent 1px),
+    linear-gradient(to bottom, #111 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* Dropdown padrão das fotos */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  visibility: hidden;
+}
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Card de App - Estilo exato da foto */
+.bot-card {
+  background: #09090b;
+  border: 1px solid #18181b;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+.bot-card:hover {
+  border-color: #27272a;
+  background: #0c0c0e;
+}
+
+/* Botão roxo centralizado da foto */
+.btn-blue-cta {
+  background: #2563eb;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  transition: all 0.2s ease;
+}
+.btn-blue-cta:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}

@@ -1,0 +1,114 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* BLINDAGEM CSS */
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+#global-loader {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #050505;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* EFEITOS DE FUNDO */
+.aura {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+.aura-1 {
+  top: -10%;
+  left: -10%;
+  animation: float 20s infinite alternate;
+}
+.aura-2 {
+  bottom: -10%;
+  right: -10%;
+  animation: float 25s infinite alternate-reverse;
+}
+@keyframes float {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 50px);
+  }
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+}
+
+/* CARDS ESTILO "GLOW" */
+.glass-card {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.05);
+  transform: translateY(-5px);
+}
+
+/* Dropdown */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  visibility: hidden;
+}
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #fff, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

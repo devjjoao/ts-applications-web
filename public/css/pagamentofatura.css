@@ -1,0 +1,66 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: #e4e4e7;
+}
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, #111 1px, transparent 1px),
+    linear-gradient(to bottom, #111 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+.card-glass {
+  background-color: #09090b;
+  border: 1px solid #27272a;
+}
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pulse-yellow {
+  animation: pulseY 2s infinite;
+}
+@keyframes pulseY {
+  0% {
+    box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(234, 179, 8, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(234, 179, 8, 0);
+  }
+}
+
+/* Modal Steps Logic */
+.step-item {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.step-active {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+.step-done .step-icon {
+  background-color: #10b981;
+  color: black;
+  border-color: #10b981;
+}
+.step-error .step-icon {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}

@@ -1,0 +1,19 @@
+body {
+  background: #050505;
+  color: #fafafa;
+}
+.faq {
+  background: #0a0a0c;
+  border: 1px solid #202024;
+  border-radius: 16px;
+}
+.faq[open] {
+  border-color: #2563eb55;
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}

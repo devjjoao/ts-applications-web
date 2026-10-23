@@ -1,0 +1,215 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: #e4e4e7;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- EFEITOS DE FUNDO --- */
+.aura {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.08) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+.aura-1 {
+  top: -10%;
+  left: -10%;
+  animation: float 20s infinite alternate;
+}
+.aura-2 {
+  bottom: -10%;
+  right: -10%;
+  animation: float 25s infinite alternate-reverse;
+}
+@keyframes float {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 50px);
+  }
+}
+
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+}
+
+.text-blue-gradient {
+  background: linear-gradient(to right, #60a5fa, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- CARDS DE RECURSOS --- */
+.feature-card {
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  border-color: #1d4ed8;
+  transform: translateX(10px);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  visibility: hidden;
+}
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Canvas da Neve */
+#snowCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* --- ESTILOS DO CARROSSEL DE CLIENTES --- */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 45s linear infinite;
+}
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.client-card {
+  position: relative;
+  background: #0a0a0a;
+  border: 2px solid #1a1b1e;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 310px;
+  height: 85px;
+  transition: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+}
+.client-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  z-index: 0;
+}
+.client-card:hover {
+  border-color: #1d4ed8;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+}
+.client-card img.server-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.card-content {
+  z-index: 1;
+  flex-grow: 1;
+}
+.card-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+  display: block;
+}
+.card-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 5px #22c55e;
+}
+.discord-icon {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 18px;
+  z-index: 1;
+}

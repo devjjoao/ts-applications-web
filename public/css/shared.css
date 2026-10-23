@@ -1,0 +1,29 @@
+.brand-logo {
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.brand-logo--22 {
+  width: 22px;
+  height: 22px;
+}
+
+.brand-logo--25 {
+  width: 25px;
+  height: 25px;
+}
+
+.brand-logo--30 {
+  width: 30px;
+  height: 30px;
+}
+
+.brand-logo--35 {
+  width: 35px;
+  height: 35px;
+}
+
+.brand-logo--45 {
+  width: 45px;
+  height: 45px;
+}

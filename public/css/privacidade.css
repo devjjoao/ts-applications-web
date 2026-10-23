@@ -1,0 +1,74 @@
+/* PADRÃO ZYPER/DASHBOARD */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #050505;
+  color: white;
+}
+
+/* --- BLINDAGEM CSS (Resolve o FOUC) --- */
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+#global-loader {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #050505;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: opacity 0.4s ease;
+}
+/* -------------------------------------- */
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, #111 1px, transparent 1px),
+    linear-gradient(to bottom, #111 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* Card de Conteúdo e Alerta */
+.content-card {
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.alert-box {
+  background-color: #2563eb1a;
+  border: 1px solid #2563eb50;
+  color: #d1d5db;
+}
+.info-item {
+  border-left: 3px solid #2563eb; /* Linha azul royal para informações */
+}
+/* Estilo do Dropdown */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

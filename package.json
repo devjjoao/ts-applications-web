@@ -1,0 +1,28 @@
+{
+  "name": "ts-applications",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal e painel de gerenciamento da Ts Applications",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "extract:css": "node scripts/extract-inline-css.js",
+    "normalize:styles": "node scripts/normalize-static-styles.js",
+    "test": "node tests/static.js && node tests/smoke.js",
+    "check": "npm run check:server && npm run check:client",
+    "check:server": "node --check src/server.js && node --check src/platform.js && node --check src/json-store.js && node --check src/security.js && node --check src/db.js",
+    "check:client": "node --check public/js/admin.js && node --check public/js/conta.js && node --check public/js/dashboard.js && node --check public/js/faq.js && node --check public/js/index.js && node --check public/js/site-guard.js && node --check public/js/status.js",
+    "format": "prettier --write \"src/*.js\" \"scripts/*.js\" \"tests/*.js\" \"public/js/*.js\" \"public/css/*.css\" \"public/{admin,conta,dashboard,faq,index,status}.html\" README.md",
+    "format:check": "prettier --check \"src/*.js\" \"scripts/*.js\" \"tests/*.js\" \"public/js/*.js\" \"public/css/*.css\" \"public/{admin,conta,dashboard,faq,index,status}.html\" README.md"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}

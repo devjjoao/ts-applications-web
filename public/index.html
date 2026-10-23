@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ts Applications - Home</title>
+    <meta
+      name="title"
+      content="Ts Applications - Especialistas em Automação para Discord"
+    />
+    <meta
+      name="description"
+      content="A maior referência em bots de vendas automáticas, gestão de tickets e automações inteligentes. Transforme seu servidor em uma estrutura de alta performance com suporte 24/7 e tecnologia cloud de ponta."
+    />
+    <meta name="theme-color" content="#1d4ed8" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tsapplications.camposcloud.app/" />
+    <meta property="og:title" content="Ts Applications" />
+    <meta
+      property="og:description"
+      content="Aumente seus lucros com nossa infraestrutura de vendas automáticas. Bots robustos, sistemas de tickets escaláveis e automação total para sua comunidade. Domine o mercado com a Ts Applications."
+    />
+    <meta
+      property="og:image"
+      content="https://tsapplications.camposcloud.app/img/ts-logo-filled.png"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Ts Applications - Automação e Bots"
+    />
+    <meta
+      property="twitter:description"
+      content="Bots de vendas, suporte e gestão. A solução definitiva para servidores profissionais."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="icon" type="image/png" href="/img/ts-logo-filled.png" />
+    <link rel="stylesheet" href="/css/shared.css" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <canvas id="snowCanvas"></canvas>
+    <div class="aura aura-1"></div>
+    <div class="aura aura-2"></div>
+    <div class="bg-grid"></div>
+
+    <header
+      class="w-full py-6 px-8 flex justify-between items-center max-w-7xl mx-auto z-50 relative"
+    >
+      <div
+        class="flex items-center gap-3 font-bold text-xl text-white tracking-wide"
+      >
+        <img
+          src="/img/ts-logo-transparent.png"
+          alt="Ts Applications"
+          class="brand-logo brand-logo--35"
+        />
+        <span>Ts <span class="text-blue-500">Applications</span></span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium text-zinc-400">
+        <a href="/" class="text-white">Início</a>
+        <a href="planos" class="hover:text-blue-400 transition">Planos</a>
+        <a href="/sobre" class="hover:text-blue-400 transition">Sobre</a>
+        <a href="/status" class="hover:text-blue-400 transition">Status</a>
+      </nav>
+      <div id="auth-area" class="relative"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 py-20 z-10 relative">
+      <section class="flex flex-col items-center text-center mb-16">
+        <h1 class="font-bold text-white leading-tight tracking-tighter mb-4">
+          <span class="text-6xl md:text-8xl block mb-2"
+            >Ts <span class="text-blue-500">Applications</span></span
+          >
+          <span class="text-4xl md:text-6xl text-blue-gradient block"
+            >Seu futuro Bot está aqui.</span
+          >
+        </h1>
+
+        <p
+          class="max-w-2xl text-zinc-400 text-lg md:text-xl leading-relaxed mb-10"
+        >
+          Transforme seu servidor no Discord em uma plataforma funcional e
+          eficiente. Com nossa solução, você melhora a interação, organização e
+          gestão.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-20">
+          <a
+            href="/dashboard"
+            class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-blue-500 transition shadow-xl shadow-blue-500/10"
+          >
+            Ir para a Dashboard <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a
+            href="planos"
+            class="border border-zinc-800 text-white px-10 py-4 rounded-2xl font-bold hover:bg-zinc-900 transition"
+          >
+            Ver Planos
+          </a>
+        </div>
+
+        <div class="w-full">
+          <h2 class="text-2xl font-bold text-white mb-2">Nossos Clientes</h2>
+          <p class="text-zinc-500 text-sm mb-10">
+            Explore as melhores comunidades do Discord e conecte-se com milhares
+            de pessoas:
+          </p>
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="servidores-track"></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="recursos"
+        class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center py-20"
+      >
+        <div>
+          <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
+            Tudo o que você precisa para
+            <span class="text-blue-500">escala total</span>
+          </h2>
+          <p class="text-zinc-400 mb-8 leading-relaxed">
+            Sistemas completos de vendas, tickets e gestão. Automatize cada
+            detalhe do seu servidor e foque no seu crescimento.
+          </p>
+          <div class="flex gap-4">
+            <div
+              class="bg-blue-600/10 border border-blue-500/20 p-4 rounded-2xl text-center min-w-[100px]"
+            >
+              <p class="text-2xl font-bold text-white">99.9%</p>
+              <p
+                class="text-[10px] text-zinc-500 uppercase font-bold tracking-widest"
+              >
+                Uptime
+              </p>
+            </div>
+            <div
+              class="bg-blue-600/10 border border-blue-500/20 p-4 rounded-2xl text-center min-w-[100px]"
+            >
+              <p class="text-2xl font-bold text-white">24/7</p>
+              <p
+                class="text-[10px] text-zinc-500 uppercase font-bold tracking-widest"
+              >
+                Suporte
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="feature-card p-6 rounded-3xl flex items-center gap-5">
+            <div
+              class="w-12 h-12 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-lg">Sistema de Vendas</h4>
+              <p class="text-sm text-zinc-500">
+                Gerencie produtos e transações de forma automatizada.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card p-6 rounded-3xl flex items-center gap-5">
+            <div
+              class="w-12 h-12 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500"
+            >
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-lg">Segurança</h4>
+              <p class="text-sm text-zinc-500">
+                Proteção robusta e sistemas de verificação segura.
+              </p>
+            </div>
+          </div>
+          <div class="feature-card p-6 rounded-3xl flex items-center gap-5">
+            <div
+              class="w-12 h-12 bg-green-600/20 rounded-2xl flex items-center justify-center text-green-500"
+            >
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-lg">
+                Automação Inteligente
+              </h4>
+              <p class="text-sm text-zinc-500">
+                Tarefas repetitivas resolvidas instantaneamente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-20 border-t border-zinc-900 bg-[#050505] relative z-10">
+      <div
+        class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="col-span-1">
+          <div
+            class="flex items-center gap-3 font-bold text-xl text-white mb-6"
+          >
+            <img
+              src="/img/ts-logo-transparent.png"
+              alt="Ts Applications"
+              class="brand-logo brand-logo--30"
+            />
+            <span>Ts Applications</span>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">
+            Infraestrutura cloud proprietária para comunidades de alta
+            performance.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 col-span-1 md:col-span-3 gap-8 md:justify-items-end"
+        >
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              Produtos
+            </h4>
+            <ul class="space-y-4 text-zinc-500 text-sm">
+              <li><a href="planos" class="hover:text-blue-500">Planos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              Legal
+            </h4>
+            <ul class="space-y-4 text-zinc-500 text-sm">
+              <li><a href="/termos" class="hover:text-blue-400">Termos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-white font-bold mb-6 text-sm uppercase tracking-widest"
+            >
+              Social
+            </h4>
+            <ul class="space-y-4 text-zinc-500 text-sm">
+              <li>
+                <a href="https://discord.gg/ts" class="hover:text-blue-500"
+                  ><i class="fa-brands fa-discord"></i> Discord</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-zinc-900 text-center"
+      >
+        <p class="text-zinc-700 text-xs tracking-widest uppercase">
+          © 2026 Ts Applications.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/index.js" defer></script>
+    <script src="/js/site-guard.js"></script>
+  </body>
+</html>

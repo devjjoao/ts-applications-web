@@ -1,0 +1,122 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+.pnp.*
+
+# Environment variables and local package credentials
+.env
+.env.*
+!.env.example
+.npmrc
+.yarnrc.yml
+
+# Runtime data containing sessions, tokens, users or transactions
+/data/*.json
+/data/*.tmp
+/data/*.json.*.tmp
+/auth02.json
+/database/admins.json
+/database/users.json
+/database/clientes.json
+/database/cobrancas_feitas.json
+/database/gerarpix.json
+/database/renovacao.json
+
+# Logs and process files
+logs/
+*.log
+*.log.*
+*.pid
+*.pid.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test and coverage output
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+junit.xml
+
+# Build output and caches
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
+.next/
+.nuxt/
+.output/
+tmp/
+temp/
+*.tmp
+
+# Backups and local exports
+backups/
+exports/
+*.bak
+*.backup
+*.old
+*.orig
+
+# Certificates and private keys
+/certs/*.pem
+/certs/*.key
+/certs/*.crt
+/certs/*.cer
+/certs/*.csr
+/certs/*.pfx
+/certs/*.p12
+*.private-key
+
+# Product packages and other generated archives
+/produtos/*.zip
+/produtos/*.tar
+/produtos/*.tar.gz
+/produtos/*.tgz
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Editor and IDE settings
+.idea/
+.vs/
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+*~
+
+# Operating-system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Crash reports and diagnostic dumps
+*.dmp
+*.stackdump
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+

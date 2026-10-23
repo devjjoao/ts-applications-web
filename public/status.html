@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Status do sistema — Ts Applications</title>
+    <meta
+      name="description"
+      content="Disponibilidade e incidentes dos serviços Ts Applications."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/status.css" />
+    <link rel="stylesheet" href="/css/shared.css" />
+  </head>
+  <body class="min-h-screen">
+    <header class="border-b border-zinc-900 px-6 py-5">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 font-bold"
+          ><img
+            src="/img/ts-logo-transparent.png"
+            class="w-9 h-9 rounded-full"
+            alt=""
+          />Ts Applications</a
+        >
+        <nav class="flex gap-5 text-sm text-zinc-400">
+          <a href="/planos">Planos</a><a href="/faq">Dúvidas</a>
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <div
+        id="summary"
+        class="card p-7 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+      >
+        <div class="flex items-center gap-5">
+          <span class="dot"></span>
+          <div>
+            <h1 class="text-2xl font-black">Consultando os serviços...</h1>
+            <p class="text-sm text-zinc-500 mt-1">Aguarde um instante.</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-zinc-600">
+            Última checagem
+          </p>
+          <p id="checked" class="font-mono text-sm mt-1">—</p>
+        </div>
+      </div>
+      <div id="components" class="grid md:grid-cols-2 gap-3 mb-12"></div>
+      <div class="grid grid-cols-2 gap-4 mb-14">
+        <div class="card p-6 text-center">
+          <p id="uptime" class="text-4xl font-black text-emerald-500">—</p>
+          <p class="text-[10px] text-zinc-500 uppercase tracking-widest mt-2">
+            Uptime 24 horas
+          </p>
+        </div>
+        <div class="card p-6 text-center">
+          <p id="latency" class="text-4xl font-black">—</p>
+          <p class="text-[10px] text-zinc-500 uppercase tracking-widest mt-2">
+            Latência da API
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-xl font-black mb-5">Histórico de incidentes</h2>
+        <div id="incidents" class="space-y-3"></div>
+      </div>
+    </main>
+    <script src="/js/status.js" defer></script>
+    <script src="/js/site-guard.js" defer></script>
+  </body>
+</html>

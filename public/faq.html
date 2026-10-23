@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dúvidas frequentes — Ts Applications</title>
+    <meta
+      name="description"
+      content="Respostas sobre bots, planos, configuração, pagamentos e segurança da Ts Applications."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/faq.css" />
+    <link rel="stylesheet" href="/css/shared.css" />
+  </head>
+  <body class="min-h-screen">
+    <header class="border-b border-zinc-900 px-6 py-5">
+      <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3 font-bold"
+          ><img
+            src="/img/ts-logo-transparent.png"
+            class="w-9 h-9 rounded-full"
+            alt=""
+          />Ts Applications</a
+        >
+        <nav class="flex gap-5 text-sm text-zinc-400">
+          <a href="/planos">Planos</a><a href="/status">Status</a>
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-3xl mx-auto px-6 py-20">
+      <div class="text-center mb-12">
+        <p class="text-blue-500 text-xs uppercase tracking-[.25em] font-black">
+          Central de ajuda
+        </p>
+        <h1 class="text-4xl md:text-5xl font-black mt-3">
+          Como podemos ajudar?
+        </h1>
+        <p class="text-zinc-500 mt-4">
+          Encontre respostas rápidas sobre o serviço.
+        </p>
+        <input
+          id="search"
+          type="search"
+          class="mt-8 w-full bg-zinc-950 border border-zinc-800 rounded-2xl px-5 py-4 outline-none focus:border-blue-600"
+          placeholder="Pesquisar uma dúvida..."
+          aria-label="Pesquisar dúvidas"
+        />
+      </div>
+      <div id="list" class="space-y-3"></div>
+      <p id="empty" class="hidden text-center text-zinc-500 py-10">
+        Nenhuma resposta encontrada.
+      </p>
+    </main>
+    <script src="/js/faq.js" defer></script>
+    <script src="/js/site-guard.js" defer></script>
+  </body>
+</html>
